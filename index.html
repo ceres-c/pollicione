@@ -17,12 +17,14 @@
         position: fixed;
         inset: 0;
         z-index: -1;
-        background: hsl(0, 85%, 70%);
-        animation: hue 20s linear infinite;
+        background: linear-gradient(120deg, #ff0080, #7928ca, #00c6ff, #00ff87, #ffeb3b, #ff0080);
+        background-size: 400% 400%;
+        animation: hue 8s ease infinite;
       }
 
       @keyframes hue {
-        to { filter: hue-rotate(360deg); }
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
       }
 
       img { width: min(50vw, 50vh); }
