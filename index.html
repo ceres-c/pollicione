@@ -10,24 +10,29 @@
         min-height: 100vh;
         display: grid;
         place-items: center;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
         background: hsl(0, 85%, 70%);
         animation: hue 20s linear infinite;
       }
 
       @keyframes hue {
-        0%, 100% { background-color: hsl(0, 85%, 70%); }
-        33% { background-color: hsl(120, 85%, 70%); }
-        66% { background-color: hsl(240, 85%, 70%); }
+        to { filter: hue-rotate(360deg); }
       }
 
-      span { font-size: min(50vw, 50vh); }
+      img { width: min(50vw, 50vh); }
 
       @media (prefers-reduced-motion: reduce) {
-        body { animation: none; }
+        body::before { animation: none; }
       }
     </style>
   </head>
   <body>
-    <span role="img" aria-label="Thumbs up">👍</span>
+    <img src="thumbs-up.svg" alt="Thumbs up">
   </body>
 </html>
