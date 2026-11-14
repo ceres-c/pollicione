@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>👍</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: hsl(0, 85%, 70%);
+        animation: hue 20s linear infinite;
+      }
+
+      @keyframes hue {
+        0%, 100% { background-color: hsl(0, 85%, 70%); }
+        33% { background-color: hsl(120, 85%, 70%); }
+        66% { background-color: hsl(240, 85%, 70%); }
+      }
+
+      span { font-size: min(50vw, 50vh); }
+
+      @media (prefers-reduced-motion: reduce) {
+        body { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <span role="img" aria-label="Thumbs up">👍</span>
+  </body>
+</html>
